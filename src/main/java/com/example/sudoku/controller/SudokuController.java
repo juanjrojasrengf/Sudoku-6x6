@@ -7,6 +7,11 @@ import javafx.scene.layout.GridPane;
 
 import java.util.Random;
 
+/**
+ * Controlador del juego Sudoku 6x6. Maneja la lógica del juego, la interacción con el usuario,
+ * y la gestión de eventos del tablero.
+ */
+
 public class SudokuController {
 
     @FXML
@@ -19,11 +24,19 @@ public class SudokuController {
     private final TextField[][] cells = new TextField[GRID_SIZE][GRID_SIZE];
     private final Random random = new Random();
 
+    /**
+     * Inicializa la interfaz del juego, configura las celdas del tablero
+     * y añade listeners para la entrada del usuario.
+     */
+
     @FXML
     public void initialize() {
         initializeGrid();
         addListenersToCells();
     }
+    /**
+     * Inicializa el tablero con referencias a las celdas del {@link GridPane}.
+     */
 
     private void initializeGrid() {
         for (int row = 0; row < GRID_SIZE; row++) {
@@ -37,7 +50,9 @@ public class SudokuController {
             }
         }
     }
-
+    /**
+     * Añade listeners a cada celda del tablero para manejar la entrada del usuario.
+     */
 
     private void addListenersToCells() {
         for (int row = 0; row < GRID_SIZE; row++) {
@@ -50,7 +65,9 @@ public class SudokuController {
             }
         }
     }
-
+    /**
+     * Maneja la acción del botón "Inicio". Limpia el tablero y genera dos números aleatorios.
+     */
     @FXML
     public void handleStartGame() {
         clearGrid();
@@ -69,6 +86,9 @@ public class SudokuController {
             }
         }
     }
+    /**
+     * Limpia el tablero de Sudoku, eliminando cualquier número y restaurando el estilo por defecto.
+     */
 
     private void clearGrid() {
         for (int row = 0; row < GRID_SIZE; row++) {
@@ -79,12 +99,21 @@ public class SudokuController {
         }
     }
 
+    /**
+     * Genera dos números aleatorios en posiciones válidas del tablero.
+     */
+
     private void generateTwoRandomNumbers() {
         for (int i = 0; i < 2; i++) {
             int number = random.nextInt(6) + 1;
             placeRandomNumber(number);
         }
     }
+    /**
+     * Coloca un número aleatorio en una posición válida del tablero.
+     *
+     * @param number El número a colocar.
+     */
 
     private void placeRandomNumber(int number) {
         int row, col;
@@ -97,6 +126,13 @@ public class SudokuController {
         System.out.println("Generated number: " + number + " at position: (" + row + ", " + col + ")");
     }
 
+    /**
+     * Maneja la entrada del usuario en una celda específica.
+     *
+     * @param row      La fila de la celda.
+     * @param col      La columna de la celda.
+     * @param newValue El valor ingresado por el usuario.
+     */
 
     private void handleCellInput(int row, int col, String newValue) {
         if (newValue.isEmpty()) {
@@ -117,6 +153,15 @@ public class SudokuController {
             }
         }
     }
+
+    /**
+     * Verifica si un número puede colocarse en una posición específica del tablero.
+     *
+     * @param row    La fila de la celda.
+     * @param col    La columna de la celda.
+     * @param number El número a verificar.
+     * @return {@code true} si el movimiento es válido, de lo contrario {@code false}.
+     */
 
     private boolean isValidMove(int row, int col, int number) {
         // Validar la fila
@@ -171,7 +216,12 @@ public class SudokuController {
         }
         return -1;
     }
-
+    /**
+     * Muestra una alerta con un mensaje
+     *
+     * @param title   Título de la alerta.
+     * @param message Mensaje a mostrar.
+     */
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
