@@ -1,0 +1,40 @@
+/* Colores por bloque */
+.cell-blue {
+    -fx-background-color: lightblue;
+}
+
+.cell-yellow {
+    -fx-background-color: lightyellow;
+}
+
+.cell-orange {
+    -fx-background-color: orange;
+}
+
+.cell-purple {
+    -fx-background-color: plum;
+}
+
+.cell-brown {
+    -fx-background-color: peru;
+}
+
+.cell-gray {
+    -fx-background-color: lightgray;
+}
+
+/* Borde general de las celdas */
+.text-field {
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-alignment: center;
+}
+
+/* Estilos para celdas resaltadas */
+.cell-help {
+    -fx-background-color: lightgreen;
+}
+
+.cell-error {
+    -fx-background-color: lightcoral;
+}
