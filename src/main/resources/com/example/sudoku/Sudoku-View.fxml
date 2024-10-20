@@ -9,14 +9,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.sudoku.controller.SudokuController">
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.sudoku.controller.SudokuController">
+
     <top>
         <Label text="SUDOKU 6x6" style="-fx-font-size: 24px;" BorderPane.alignment="CENTER"/>
     </top>
 
     <center>
         <GridPane fx:id="sudokuGrid" hgap="5" vgap="5" style="-fx-padding: 10;">
-            <!-- Definimos las restricciones para 6 filas y 6 columnas -->
             <columnConstraints>
                 <ColumnConstraints minWidth="50" prefWidth="50" maxWidth="50"/>
                 <ColumnConstraints minWidth="50" prefWidth="50" maxWidth="50"/>
@@ -35,50 +36,49 @@
                 <RowConstraints minHeight="50" prefHeight="50" maxHeight="50"/>
             </rowConstraints>
 
-            <!-- Definimos las celdas del tablero 6x6 -->
             <children>
-                <!-- Generamos las 36 celdas (6x6) -->
-                <TextField GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="0" GridPane.columnIndex="2" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="0" GridPane.columnIndex="3" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="0" GridPane.columnIndex="4" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="0" GridPane.columnIndex="5" style="-fx-alignment: center;"/>
+                <!-- Generar las celdas 6x6 -->
+                <TextField GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <TextField GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <TextField GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+                <TextField GridPane.rowIndex="0" GridPane.columnIndex="4"/>
+                <TextField GridPane.rowIndex="0" GridPane.columnIndex="5"/>
 
-                <TextField GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="1" GridPane.columnIndex="2" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="1" GridPane.columnIndex="3" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="1" GridPane.columnIndex="4" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="1" GridPane.columnIndex="5" style="-fx-alignment: center;"/>
+                <TextField GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <TextField GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <TextField GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+                <TextField GridPane.rowIndex="1" GridPane.columnIndex="4"/>
+                <TextField GridPane.rowIndex="1" GridPane.columnIndex="5"/>
 
-                <TextField GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="2" GridPane.columnIndex="2" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="2" GridPane.columnIndex="3" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="2" GridPane.columnIndex="4" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="2" GridPane.columnIndex="5" style="-fx-alignment: center;"/>
+                <TextField GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <TextField GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                <TextField GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+                <TextField GridPane.rowIndex="2" GridPane.columnIndex="4"/>
+                <TextField GridPane.rowIndex="2" GridPane.columnIndex="5"/>
 
-                <TextField GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="3" GridPane.columnIndex="2" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="3" GridPane.columnIndex="3" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="3" GridPane.columnIndex="4" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="3" GridPane.columnIndex="5" style="-fx-alignment: center;"/>
+                <TextField GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <TextField GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+                <TextField GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+                <TextField GridPane.rowIndex="3" GridPane.columnIndex="4"/>
+                <TextField GridPane.rowIndex="3" GridPane.columnIndex="5"/>
 
-                <TextField GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="4" GridPane.columnIndex="1" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="4" GridPane.columnIndex="2" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="4" GridPane.columnIndex="3" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="4" GridPane.columnIndex="4" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="4" GridPane.columnIndex="5" style="-fx-alignment: center;"/>
+                <TextField GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                <TextField GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+                <TextField GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+                <TextField GridPane.rowIndex="4" GridPane.columnIndex="4"/>
+                <TextField GridPane.rowIndex="4" GridPane.columnIndex="5"/>
 
-                <TextField GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="5" GridPane.columnIndex="1" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="5" GridPane.columnIndex="2" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="5" GridPane.columnIndex="3" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="5" GridPane.columnIndex="4" style="-fx-alignment: center;"/>
-                <TextField GridPane.rowIndex="5" GridPane.columnIndex="5" style="-fx-alignment: center;"/>
+                <TextField GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                <TextField GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+                <TextField GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+                <TextField GridPane.rowIndex="5" GridPane.columnIndex="4"/>
+                <TextField GridPane.rowIndex="5" GridPane.columnIndex="5"/>
             </children>
         </GridPane>
     </center>
@@ -87,6 +87,7 @@
         <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
             <Button text="Inicio" onAction="#handleStartGame"/>
             <Button text="Ayuda" onAction="#handleHelp"/>
+            <Button text="Guía" onAction="#handleGuide"/>
         </HBox>
     </bottom>
 </BorderPane>
